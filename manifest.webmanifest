@@ -2,17 +2,18 @@
   "name": "Gridiron GM — NFL Franchise Sim",
   "short_name": "Gridiron GM",
   "description": "A mobile-first NFL franchise management simulator.",
-  "start_url": "/",
+  "start_url": "./",
   "display": "standalone",
   "background_color": "#07111f",
   "theme_color": "#07111f",
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "/gridiron-icon.svg",
+      "src": "./gridiron-icon.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any maskable"
     }
-  ]
+  ],
+  "scope": "./"
 }
