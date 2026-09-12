@@ -3,17 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <meta name="theme-color" content="#07111f" />
-    <meta name="description" content="A mobile-first NFL franchise management simulator." />
+    <meta name="theme-color" content="#0b0f14" />
+    <meta name="description" content="Gridiron GM: a mobile-first NFL franchise manager." />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <link rel="manifest" href="/manifest.webmanifest" />
     <link rel="apple-touch-icon" href="/gridiron-icon.svg" />
-    <title>NFL Franchise Sim</title>
-    <script type="module" crossorigin src="/assets/index-Cz3Pszfs.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-CZE0fUha.css">
+    <link rel="preload" href="/fonts/barlow-condensed-700.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/barlow-500.woff2" as="font" type="font/woff2" crossorigin />
+    <!-- OSS 1.8: the scoreboard face. Preloaded because it paints the score,
+         which is the first number on the first viewport of every gamecast. -->
+    <link rel="preload" href="/fonts/big-shoulders-display-700.woff2" as="font" type="font/woff2" crossorigin />
+    <title>Gridiron GM</title>
+    <script type="module" crossorigin src="/assets/index-DMML459h.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CnN0mNLd.css">
   </head>
   <body>
+    <!--
+    DIRECTION CONTRACT (seed 7c60536d, mode operate, canon: the sports app played straight; surface: franchise hub, then title)
+    THESIS: the hub is the franchise hub a fan already knows, executed at the level of ESPN, Madden franchise mode and Sleeper; it refuses metaphor and earns identity through craft and the club's own colours.
+    OWN-WORLD: blue-black slate, white actions, the club's primary colour across the top band and the club's colours in the week strip, matchup bar and meters, Barlow Condensed figures, Barlow copy, rounded cards with hairlines, real busts for people.
+    STORY: the GM opens the phone, sees the club, the record and the week in the band, the matchup and one white button beneath, the front office as a grid, and everything else in cards below.
+    FIRST VIEWPORT: the club band with crest, name and record, the week strip with this week filled, the scores ticker, the matchup panel with two crests, a two-colour odds bar and the play and sim buttons.
+    FORM: the category standard, chosen by the user on purpose in round four with ESPN, Madden and Sleeper named as the bar; seed key 7c60536d.
+    FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
+    -->
     <div id="root"></div>
   </body>
 </html>
