@@ -1,0 +1,1 @@
+const c=53.33;const o=120,L=10,a=110,N=23.58,H=29.75,D=26.665,I=(s,t)=>({x:s,y:t}),_=(s,t,E)=>s<t?t:s>E?E:s,O=s=>10+s,T=s=>100-s,r=s=>{const t=_(Math.round(s),0,100);return t===50?"50":t<50?`OWN ${t}`:`OPP ${100-t}`},F=(s,t)=>{const E=s.x-t.x,n=s.y-t.y;return Math.sqrt(E*E+n*n)};export{c as F,N as H,a as O,H as a,D as b,_ as c,o as d,F as e,T as f,L as g,O as l,I as v,r as y};
