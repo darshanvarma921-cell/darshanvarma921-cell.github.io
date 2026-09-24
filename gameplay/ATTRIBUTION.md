@@ -2,6 +2,8 @@
 
 `player.glb` is built from Quaternius' Ultimate Modular Men Pack (February 2022), CC0 1.0. The source `.blend`, conversion script, and preserved legacy player asset are in `assets/characters/quaternius/`, `scripts/build-football-player.py`, and `assets/characters/player-legacy.glb`.
 
+Its blocking and stance clips (`block_engage`, `pass_set`, `drive_block`, `beaten`, `three_point`, `crouch`; round 20) are original, hand-keyed in the same script on the Quaternius rig; no third-party motion. Pass rushers' sheds reuse the spin and stiff-arm companion clips below. Its backfield clips (`under_center`, `snap_receive`, `crossover_drop`, `gun_catch`, `handoff_give`, `pitch`; round 22) are original and hand-keyed the same way; `handoff_take` and `pitch_catch` are the pack's own Run legs with hand-keyed arms.
+
 `qb_throw_cmu33_01.glb` is a retargeted, in-place animation derived from Carnegie Mellon Graphics Lab Motion Capture Database, subject 33, trial 01 (football throw/catch), retrieved September 22, 2026. Only frames 1915-2035 (one pass: set, cock, release, follow-through) are used; the feet are re-seated on the ankles in `scripts/build-qb-throw-mocap.py`.
 
 `jump_ball_cmu16_03.glb` is a retargeted, in-place animation derived from Carnegie Mellon Graphics Lab Motion Capture Database, subject 16, trial 03 (“high jump”), retrieved September 22, 2026. Only frames 1915-2035 (one pass: set, cock, release, follow-through) are used; the feet are re-seated on the ankles in `scripts/build-qb-throw-mocap.py`.
