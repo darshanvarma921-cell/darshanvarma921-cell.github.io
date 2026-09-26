@@ -1,4 +1,4 @@
-const CACHE_NAME = 'gridiron-gm-shell-v11';
+const CACHE_NAME = 'gridiron-gm-shell-v11-3';
 const SHELL = ['/', '/manifest.webmanifest', '/gridiron-icon.svg'];
 
 self.addEventListener('install', event => {
