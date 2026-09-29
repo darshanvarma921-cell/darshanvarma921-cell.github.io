@@ -3,10 +3,10 @@
 This branch is written by `scripts/deploy-pages.ps1` in the franchise repo.
 Do not edit it by hand; the next deploy mirrors the build over it.
 
-- source commit: `7d46b6f` (nfl-franchise-sim-live, master)
-- deployed: 2026-09-27 06:36
-- entry chunk: `assets/index-C6ECnjn5.js`
-- label: v13.0 pre-snap (motion, audibles, hard count, offside) + Madden landscape camera
-- app version: v13.0 (src/appVersion.ts; bump on every deploy)
+- source commit: `a4d7a67` (nfl-franchise-sim-live, master)
+- deployed: 2026-09-29 20:14
+- entry chunk: `assets/index-Hk_C6GbB.js`
+- label: v14.0 R38 Mixamo movement + portrait default with face pad
+- app version: v14.0 (src/appVersion.ts; bump on every deploy)
 
 `404.html` is a copy of `index.html` so deep links load the current build.
