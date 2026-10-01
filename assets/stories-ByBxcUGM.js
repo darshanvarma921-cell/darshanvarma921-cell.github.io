@@ -1,0 +1,1 @@
+import{cF as e}from"./index-BfchYJQq.js";const _=async()=>(await e(async()=>{const{default:t}=await import("./press-conference-DgwbJL-w.js");return{default:t}},[])).default;export{_ as loadPressConferenceStory};
