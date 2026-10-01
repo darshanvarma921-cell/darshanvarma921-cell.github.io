@@ -9,14 +9,19 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <link rel="manifest" href="/manifest.webmanifest" />
     <link rel="apple-touch-icon" href="/gridiron-icon.svg" />
+    <!-- UI overhaul Phase 1 item 5: 800 is the display weight DESIGN.md
+         actually specs for the first viewport (club band name, record figure,
+         page titles) -- everything 700 preloaded already covered .section-title
+         but not the heavier face those headline elements render in. -->
+    <link rel="preload" href="/fonts/barlow-condensed-800.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/barlow-condensed-700.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/barlow-500.woff2" as="font" type="font/woff2" crossorigin />
     <!-- OSS 1.8: the scoreboard face. Preloaded because it paints the score,
          which is the first number on the first viewport of every gamecast. -->
     <link rel="preload" href="/fonts/big-shoulders-display-700.woff2" as="font" type="font/woff2" crossorigin />
     <title>Gridiron GM</title>
-    <script type="module" crossorigin src="/assets/index-lg4ylCU1.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-ahXe07Og.css">
+    <script type="module" crossorigin src="/assets/index-Di7Sxv1n.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-C8T90ZJq.css">
   </head>
   <body>
     <!--
