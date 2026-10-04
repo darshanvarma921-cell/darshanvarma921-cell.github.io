@@ -1,1 +1,0 @@
-import{a0 as r}from"./index-CBOYG5oF.js";const e=i=>{const a=i.name.toLowerCase().replace(/\b(jr|sr|ii|iii|iv)\b\.?/g,"").replace(/[^a-z0-9]/g,"");return a==="brandonmarshall"?`${a}-${r(i.position)}`:a};export{e as a};
