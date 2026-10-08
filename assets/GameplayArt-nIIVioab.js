@@ -1,1 +1,0 @@
-import{r as l,j as s}from"./index-CLFVYmZp.js";const e=new Set,g=({name:t,fallback:n=null,className:i,style:o,alt:a=""})=>{const r=`/gameplay/${t}.png`,[d,c]=l.useState(()=>e.has(r));return!t||d?s.jsx(s.Fragment,{children:n}):s.jsx("img",{src:r,alt:a,"aria-hidden":a==="",loading:"lazy",decoding:"async",className:i,style:o,onError:()=>{e.add(r),c(!0)}})};export{g as G};
