@@ -1,4 +1,6 @@
-const CACHE_NAME = 'gridiron-gm-shell-v13-0';
+// H2-1: the version token below is replaced at build time (vite.config.ts) from src/appVersion.ts, so every release gets a new
+// cache, a new worker, and the old caches are deleted on activate. Nobody edits this by hand.
+const CACHE_NAME = 'gridiron-gm-shell-v26-4';
 const SHELL = ['/', '/manifest.webmanifest', '/gridiron-icon.svg'];
 
 self.addEventListener('install', event => {
@@ -33,10 +35,20 @@ self.addEventListener('fetch', event => {
     return;
   }
 
-  event.respondWith(
-    caches.match(event.request).then(cached => cached || fetch(event.request).then(response => {
-      if (response.ok) caches.open(CACHE_NAME).then(cache => cache.put(event.request, response.clone()));
-      return response;
-    }))
-  );
+  const put = response => {
+    if (response.ok) { const copy = response.clone(); caches.open(CACHE_NAME).then(cache => cache.put(event.request, copy)); }
+    return response;
+  };
+
+  // Content-hashed JS/CSS under /assets/ never change: cache-first. Everything else is un-hashed (gameplay GLBs,
+  // player-busts, cards, team-logos, fonts, headshots): stale-while-revalidate, so a changed file is picked up
+  // on the next load instead of being served from cache forever.
+  if (new URL(event.request.url).pathname.startsWith('/assets/')) {
+    event.respondWith(caches.match(event.request).then(cached => cached || fetch(event.request).then(put)));
+    return;
+  }
+  event.respondWith(caches.match(event.request).then(cached => {
+    const fresh = fetch(event.request).then(put).catch(() => cached);
+    return cached || fresh;
+  }));
 });
