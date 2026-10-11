@@ -34,3 +34,9 @@ R52 (October 4, 2026) adds four clips to `mixamo_clips.glb`, retargeted, ground-
 - A juke (`juke_l`, frames 23-41: the plant and the cut to his left; mirrored `juke_r`), made by Darshan with Rokoko Vision from reference game footage of a double cut, exported on the Mixamo skeleton.
 - A truck (`truck_drive`, frames 25-38 of Darshan's Rokoko Vision combine take already credited above for `dl_getoff`: the low, shoulder-first drive), ball arm tucked.
 - A stiff arm (`stiff_arm_mp`, the last 0.8 s of a run-and-stiff-arm, mirrored so the free arm is the left), made by Darshan from reference game footage with a local video-to-motion pipeline (Google MediaPipe Pose Landmarker, Apache-2.0, run offline; retargeted in Blender onto the Mixamo skeleton).
+
+## Body models and the Mixamo caveat (HC-R1, 11 October 2026)
+
+`player-titan.glb` and `player-lean.glb` are built from meshes generated with Meshy AI (meshy.ai, free plan, CC BY 4.0: credit "3D models generated with Meshy AI"; modified: rigged to the game skeleton, shape keys and kit zones added) and from MakeHuman / MPFB system assets (CC0). The build pipeline is the private `player-model-v6` repo.
+
+The Mixamo terms quoted above allow use inside a game and forbid redistributing the animation files on their own. The Mixamo clips here are retargeted onto our skeleton and baked into game GLBs; they are served as part of the game, not as a clip library. Rokoko Vision free-tier terms were not recorded.
