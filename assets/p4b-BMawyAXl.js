@@ -1,0 +1,1 @@
+const _=.5,E=.6,A=26,T=1.2,R=29,s=2,O=100,I=46,N=26,L=2,U=30,o=.45,t=1,P=4,a=5,c=80,n=88,G=4,C=70,M=32,S=2,D=82,V=28,Y=85,B=80,F=28,H=3,W=80,X=8,K=10;export{P as B,Y as C,s as D,K as F,N as M,I as P,O as T,B as a,F as b,_ as c,E as d,A as e,T as f,R as g,L as h,U as i,t as j,o as k,W as l,H as m,X as n,G as o,a as p,D as q,V as r,C as s,c as t,n as u,M as v,S as w};
