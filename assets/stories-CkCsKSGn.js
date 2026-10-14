@@ -1,1 +1,0 @@
-import{am as a}from"./index-D37MJd9R.js";const _=async()=>(await a(async()=>{const{default:t}=await import("./press-conference-DgwbJL-w.js");return{default:t}},[])).default;export{_ as loadPressConferenceStory};
