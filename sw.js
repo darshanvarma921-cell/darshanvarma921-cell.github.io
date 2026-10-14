@@ -1,6 +1,6 @@
 // H2-1: the version token below is replaced at build time (vite.config.ts) from src/appVersion.ts, so every release gets a new
 // cache, a new worker, and the old caches are deleted on activate. Nobody edits this by hand.
-const CACHE_NAME = 'gridiron-gm-shell-v28-2';
+const CACHE_NAME = 'gridiron-gm-shell-v28-3';
 const SHELL = ['/', '/manifest.webmanifest', '/gridiron-icon.svg'];
 
 self.addEventListener('install', event => {
