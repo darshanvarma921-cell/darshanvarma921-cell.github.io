@@ -1,6 +1,6 @@
 // H2-1: the version token below is replaced at build time (vite.config.ts) from src/appVersion.ts, so every release gets a new
 // cache, a new worker, and the old caches are deleted on activate. Nobody edits this by hand.
-const CACHE_NAME = 'gridiron-gm-shell-v33-0';
+const CACHE_NAME = 'gridiron-gm-shell-v33-1';
 const SHELL = ['/', '/manifest.webmanifest', '/gridiron-icon.svg'];
 
 self.addEventListener('install', event => {
@@ -23,14 +23,16 @@ self.addEventListener('fetch', event => {
   if (event.request.method !== 'GET' || new URL(event.request.url).origin !== self.location.origin) return;
 
   if (event.request.mode === 'navigate') {
+    // Audit 27 Oct: one cached page per route (franchise `/` vs `/quickplay/`), and only real 200s,
+    // so a Quickplay visit or an error page can never replace the franchise shell.
+    const key = new URL(event.request.url).pathname;
     event.respondWith(
       fetch(event.request)
         .then(response => {
-          const copy = response.clone();
-          caches.open(CACHE_NAME).then(cache => cache.put('/', copy));
+          if (response.ok) { const copy = response.clone(); caches.open(CACHE_NAME).then(cache => cache.put(key, copy)); }
           return response;
         })
-        .catch(() => caches.match('/'))
+        .catch(() => caches.match(key).then(hit => hit || caches.match('/')))
     );
     return;
   }
