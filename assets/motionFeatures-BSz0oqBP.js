@@ -1,1 +1,0 @@
-import{d as m}from"./features-animation-ByaPeKTG.js";import"./gestures-BfFhllG5.js";import"./index-Bw87TUQw.js";import"./is-svg-component-DCmpbCDr.js";import"./is-html-element-B0kyVb-t.js";export{m as default};
