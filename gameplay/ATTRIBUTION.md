@@ -39,6 +39,8 @@ R52 (October 4, 2026) adds four clips to `mixamo_clips.glb`, retargeted, ground-
 
 `player-titan.glb` and `player-lean.glb` are built from meshes generated with Meshy AI (meshy.ai, free plan, CC BY 4.0: credit "3D models generated with Meshy AI"; modified: rigged to the game skeleton, shape keys and kit zones added) and from MakeHuman / MPFB system assets (CC0). The build pipeline is the private `player-model-v6` repo.
 
+Since 27 Nov 2026 the body of `player-lean.glb` is Quaternius' Universal Base Characters "Superhero Male" (quaternius.com, CC0 1.0), dressed and rigged in `player-model-v6` (`kit/hero/build_kit.py`); its helmet and cleats are still the Meshy Titan's (CC BY 4.0, credit as above).
+
 The Mixamo terms quoted above allow use inside a game and forbid redistributing the animation files on their own. The Mixamo clips here are retargeted onto our skeleton and baked into game GLBs; they are served as part of the game, not as a clip library. Rokoko Vision free-tier terms were not recorded.
 
 ## Argon clips (ARGON-ANIM, 19 October 2026)
